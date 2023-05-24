@@ -1,0 +1,187 @@
+/* Global styles */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(198, 243, 243);
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #f5f3f3;
+}
+
+a {
+  text-decoration: none;
+  color: #f3f3f3;
+}
+
+ul {
+  list-style: none;
+}
+
+button,
+input[type="submit"] {
+  cursor: pointer;
+}
+
+/* Header */
+
+header {
+  background-color: #e13816;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  position:inherit;
+  top: 0;
+  z-index: 999;
+  display:flow-root;
+  ;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+nav ul {
+  display: flex;
+}
+
+nav ul li {
+  margin-right: 1rem;
+}
+
+nav ul li:last-child {
+  margin-right: 0;
+}
+
+nav ul li a {
+  padding: 0.5rem;
+  transition: all 0.2s ease-in-out;
+}
+
+nav ul li a:hover {
+  background-color: #e9f155;
+  color: #fff;
+}
+
+h1 {
+  font-size: 3rem;
+  margin: 2rem 0;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+/* Hero section */
+
+.hero-section {
+  background-image: url("img/full-shot-man-carrying-baggage.jpg");
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  text-align: center;
+}
+
+.hero-section h3 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero-section p {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.button {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background-color: #f0d353;
+  color: #333;
+  border-radius: 50px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: all 0.2s ease-in-out;
+}
+
+.button:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+/* Rooms section */
+
+.rooms-section {
+  padding: 4rem 0;
+  text-align: center;
+}
+
+.rooms-section h3 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.room {
+  display: inline-block;
+  margin: 2rem;
+}
+
+.room img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.room h4 {
+  font-size: 1.5rem;
+  margin: 1rem 0;
+}
+
+.room p {
+  font-size: 1.25rem;
+  margin: 1rem 0;
+}
+
+/* Dining section */
+
+.dining-section {
+  background-image: url(img/side-view-breakfast-omelet-with-mushrooms-juice-croissants-room-service-hotel-with-amazing-sea-view.jpg);
+  background-color: #f5f5f5;
+  padding: 4rem 0;
+  text-align: center;
+}
+
+.dining-section h3 {
+  font-size: 2rem;
+  margin-bottom: 2rem
+}
+
+.events-section{
+  color: #000000;
+}
+
+.rooms-section{
+color: #000000;
+}
+
+.footer{
+  width: 100%;
+  padding: auto;
+  color:#000000;
+  text-align: center;
+  background-color: #e13816;
+}
