@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Booking - Legendary Homes</title>
+  <link rel="stylesheet" href="booking.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Booking</h1>
+
+    <form action="#" method="post">
+      <label for="check-in">Check-in date:</label>
+      <input type="date" id="check-in" name="check-in" required>
+
+      <label for="check-out">Check-out date:</label>
+      <input type="date" id="check-out" name="check-out" required>
+
+      <label for="guests">Number of guests:</label>
+      <input type="number" id="guests" name="guests" min="1" max="4" required>
+
+      <label for="room-type">Room type:</label>
+      <select id="room-type" name="room-type" required>
+        <option value="">Select a room type</option>
+        <option value="standard">Standard room</option>
+        <option value="deluxe">Deluxe room</option>
+        <option value="suite">Suite</option>
+      </select>
+
+      <label for="special-requests">Special requests:</label>
+      <textarea id="special-requests" name="special-requests" rows="4"></textarea>
+
+      <button type="submit">Book now</button>
+    </form>
+  </main>
+
+  <footer>
+    <p>&copy; 2023 Legendary Homes. All rights reserved.</p>
+  </footer>
+</body>
+</html>
