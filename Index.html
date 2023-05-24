@@ -1,1 +1,138 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Legendary Homes - Luxury Hotel</title>
+    <link rel="stylesheet" href="home.css">
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="booking.html">Book Now</a></li>
+          <li><a href="menu.html">Restaurant Menu</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <h1 style="font-family:'Times New Roman', Times, serif;">Legendary Homes</h1>
+      <h2>Luxury Hotel</h2>
+    </header>
 
+    <main>
+      <section class="hero-section">
+        <h3>Welcome to Legendary Homes</h3>
+        <p>Experience luxury at its finest.</p>
+        
+        <a href="booking.html" class="button">Book Now</a>
+      </section>
+
+      <section class="rooms-section">
+        <h3>Our Rooms</h3>
+        <div class="room">
+          <img src="img/3d-rendering-beautiful-comtemporary-luxury-bedroom-suite-hotel-with-tv (1).jpg" alt="Room 1">
+          <h4>Superior Room</h4>
+          <p>$300/night</p>
+          <a href="booking.html" class="button">Book Now</a>
+        </div>
+        <div class="room">
+          <img src="img/3d-rendering-beautiful-comtemporary-luxury-bedroom-suite-hotel-with-tv.jpg" alt="Room 2">
+          <h4>Deluxe Room</h4>
+          <p>$400/night</p>
+          <a href="booking.html" class="button">Book Now</a>
+        </div>
+        <div class="room">
+          <img src="img/3d-rendering-beautiful-comtemporary-luxury-bedroom-suite-hotel-with-tv (2).jpg" alt="Room 3">
+          <h4>Premium Room</h4>
+          <p>$500/night</p>
+          <a href="booking.html" class="button">Book Now</a>
+        </div>
+      </section>
+
+      <section class="dining-section">
+        <h3>Dining</h3>
+        <p>Experience our fine dining restaurants.</p>
+        <a href="menu.html" class="button">See Menus</a>
+      </section>
+
+      
+
+     
+    </main>
+
+    <div class = "footer">
+      <p>&copy; 2023 Legendary Homes. All rights reserved.</p>
+</div>
+
+    <script src="script.js">
+        // Toggle mobile menu
+
+        const header = document.querySelector('header');
+let scrollPos = window.scrollY;
+
+window.addEventListener('scroll', function() {
+  scrollPos = window.scrollY;
+
+  if (scrollPos > 100) {
+    header.classList.add('header-retracted');
+  } else {
+    header.classList.remove('header-retracted');
+  }
+});
+
+
+const menuBtn = document.querySelector('.menu-btn');
+const menu = document.querySelector('nav ul');
+
+let menuOpen = false;
+
+menuBtn.addEventListener('click', () => {
+  if (!menuOpen) {
+    menuBtn.classList.add('open');
+    menu.classList.add('open');
+    menuOpen = true;
+  } else {
+    menuBtn.classList.remove('open');
+    menu.classList.remove('open');
+    menuOpen = false;
+  }
+});
+
+// Smooth scroll to section
+
+const links = document.querySelectorAll('nav ul li a');
+
+for (const link of links) {
+  link.addEventListener('click', clickHandler);
+}
+
+function clickHandler(e) {
+  e.preventDefault();
+  const href = this.getAttribute('href');
+  const offsetTop = document.querySelector(href).offsetTop;
+
+  scroll({
+    top: offsetTop,
+    behavior: 'smooth'
+  });
+}
+
+// Display room details on click
+
+const rooms = document.querySelectorAll('.room');
+
+for (const room of rooms) {
+  room.addEventListener('click', () => {
+    const details = room.querySelector('.room-details');
+    if (details.classList.contains('open')) {
+      details.classList.remove('open');
+    } else {
+      details.classList.add('open');
+    }
+  });
+}
+
+    </script>
+  </body>
+</html>
